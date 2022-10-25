@@ -1,5 +1,4 @@
 
-
 <html>
 <head>
     <title>Registration</title>
@@ -15,22 +14,22 @@
         <fieldset>
                     <legend>Registration</legend>
             <table>
-                
-                <tr><td>Name: <input type="text" name="name" value="" placeholder="Enter User Name"></td></tr>
+                <tr><td>Name: <input type="text" name="name" value="" placeholder="Enter User Name">
+                 </td></tr>
                 <tr><td>Email : <input type="email" name="email" value="" placeholder=""></td></tr>
                 <tr><td>User Name: <input type="text" name="username" value="" placeholder="Enter User Name"></td></tr>
                 <tr><td>Password : <input type="password" name="password" value="" placeholder="Enter Password"></td></tr>
                 <tr><td>Confirm Password : <input type="password" name="password" value="" placeholder="Enter Password Again"></td></tr>
                 <tr><td> <fieldset>
                     <legend>Gernder</legend>
-                    <input type="radio" name="gender" value="">Male
-                    <input type="radio" name="gender" value="">Female
-                    <input type="radio" name="gender" value="">Other <br>    
+                    <input type="radio" name="gender" value="Male">Male
+                    <input type="radio" name="gender" value="Female">Female
+                    <input type="radio" name="gender" value="Other">Other <br>    
                     
                 </fieldset></td></tr>
                 <tr><td><fieldset>
                     <legend>Date of Birth</legend>
-                        <input type="date" name="" value="" ><br>
+                        <input type="date" name="date" value="" ><br>
                         
                 </fieldset> </td></tr>
                 <tr><td><button type="submit">Submit</button><input type="reset" name="" value="Reset"/></td></tr>

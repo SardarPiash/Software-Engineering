@@ -1,4 +1,13 @@
 
+<?php
+    session_start();
+    if(!isset($_SESSION['status']))
+    {
+        header('location: registration.php');
+    }
+    
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,20 +18,22 @@
 </head>
 <body>
 <img src="company_name.png" width="200" height="150">
-    <table align="right"><tr><td>Logged in as<a href="publichome.html">Name</a></td>
+    <table align="right"><tr><td>Logged in as<a href="publichome.html">
+        <?php 
+                echo $_SESSION['name']; ?></a></td>
     <td><a href="logout.php">Logout</a></td>
     
     </tr></table>
-    <h4>Account</h4><br>
-    <table>
+    
+    <table border="1" width="800">
         <tr>
             <td>
-                
+            <h4>Account</h4><br>
                 <ul type="radio">
                    <li><a href="dashboard.php">Dashboard</a><br></li> 
                    <li><a href="viewprofile.php">View Profile</a></li>
                    <li><a href="editprofile.php">Edit Profile</a><br></li> 
-                    <li><a href="changeprofilepic.php">Change Profile Picture</a><br></li>
+                    <li><a href="changeppicture.php">Change Profile Picture</a><br></li>
                     <li><a href="changepassword.php">Change Password</a><br></li>
                     <li><a href="logout.php">Log out</a><br></li>
                 </ul>
@@ -31,7 +42,9 @@
         
         
             <td>
-                <h2 align="right">Welcome Bob</h2>
+                <h2 align="right"> <?php 
+                        echo "Welcome ".$_SESSION['name']; 
+                ?></h2>
             </td>
         
         <tr>
